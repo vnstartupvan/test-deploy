@@ -890,7 +890,8 @@ export const filterReducer = createSlice({
             state.productPageData = action.payload;
         },
         actionCartList: (state, action) => {
-            state.cartList = action.payload;
+            let updatedCartList = action.payload ? action.payload : [];
+            state.cartList = updatedCartList;
         },
     },
 })
