@@ -996,6 +996,7 @@ img {
   }
   .add-to-cart-btn svg{
     width: 12px;
+    display: inline-block!important;
     fill: #fff;
     height: auto;
     vertical-align: middle;
