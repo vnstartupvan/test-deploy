@@ -1,0 +1,24 @@
+[
+    {   
+        "id": "1",
+        "img": "https://www.hm.com/nt-north/uploads/2022/08/FNP-1046B-3x2-Consideration-Pt1-aw22-trend-report-1920x1280.jpg",
+        "title": "AW22 TREND REPORT"
+    },
+    {
+        "id": "2",
+        "img": "https://www.hm.com/nt-north/uploads/2022/09/5095H-3x2-denim-fits-1920x1280.jpg",
+        "text": "Search for a 360 fit: when it’s a YESSS all the way around.",
+        "title": "Find your perfect fit "
+    },
+    {
+        "id": "3",
+        "img": "https://www.hm.com/nt-north/uploads/2022/08/FN-4046A-3x2-destination-denim-1920x1280.jpg",
+        "title": "Destination: denim"
+    },
+    {
+        "id": "4",
+        "img": "https://www.hm.com/nt-north/uploads/2022/07/3076A-jeans-guide-NTM-3x2-1-1920x1280.jpg",
+        "text": "Every jeans fit explained",
+        "title": "The jeans guide"
+    }
+]
