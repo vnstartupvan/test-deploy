@@ -1135,6 +1135,7 @@ img {
     position: relative;
   }
   .gg-login-btn, .logout-btn {
+    z-index: 9;
     position: absolute;
     top: 100%;
     display: flex;

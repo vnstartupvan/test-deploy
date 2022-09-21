@@ -23,12 +23,14 @@ function HeaderComponent() {
             const user = jwt_decode(response.credential)
             dispatch(handleLogin(user))
         };
+        window.onload = () => {
             window.google.accounts.id.initialize({
                 client_id: '658443136711-li4ip94et41bdj04vkuovqev658mpoeu.apps.googleusercontent.com',
                 callback: handleCredentialResponse
             });
             setIsLoading(true)
-        
+        }
+
         if (toggleLogin) {
             window.google.accounts.id.renderButton(
                 document.querySelector('.gg-login-btn'),
