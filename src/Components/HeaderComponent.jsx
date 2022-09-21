@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { AllContext } from '../Templates/CollectionTemplate';
 import InstantSearchComponent from './InstantSearchComponent';
 import { handleLogin, handleLogout } from '../Redux/shopReducer';
+import { actionCartList } from '../Redux/filterReducer';
 
 function HeaderComponent() {
     const dispatch = useDispatch();
@@ -37,7 +38,9 @@ function HeaderComponent() {
 
     }, [toggleLogin, isLoading])
     useEffect(() => {
-        setCartList(JSON.parse(localStorage.getItem('cartList')));
+        let initCartList = JSON.parse(localStorage.getItem('cartList'));
+        setCartList(initCartList);
+        dispatch(actionCartList(initCartList));
     }, [])
     //bug: missing context in homepage/product page/cart page
     const actionToggleCart = window.location.href.includes('collection') ? context.toggleAjaxCart.actionToggleCart : '';
