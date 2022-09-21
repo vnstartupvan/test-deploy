@@ -12,7 +12,7 @@ function HeaderComponent() {
     const dispatch = useDispatch();
     const [toggleLogin, setToggleLogin] = useState(false);
     const [toggleLogout, setToggleLogout] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const context = useContext(AllContext);
     const [toggleSearch, setToggleSearch] = useState('');
     const [cartList, setCartList] = useState([]);

@@ -21,6 +21,7 @@ img {
 /* Components */
 .about-me-content {
   color: white;
+  margin: 24px 0;
   background: slategray;
   padding: 40px;
   text-align: justify;
@@ -864,6 +865,8 @@ img {
     border-top: 1px solid #E8E9EB;
   }
   .filter-tree-container {
+    overflow-y: scroll;
+    height: calc(100% - 47px);
     padding: 0 15px;
   }
   .filter-option p {
@@ -961,6 +964,8 @@ img {
   }
   .main-product-info {
     margin-top: 35px;
+    width: 100%;
+    padding-left: 0;
   }
   .collection-main-left-sidebar {
     position: fixed;
@@ -1096,7 +1101,7 @@ img {
     height: unset;
   }
   .carousel-title {
-    font-size: 24px;
+    font-size: 20px;
   }
   .section-header {
     padding: 25px 0;
@@ -1104,9 +1109,9 @@ img {
   .section-home {
     padding: 0 32px;
   }
-  .section-home .section-footer {
+  /* .section-home .section-footer {
     margin: 0 -40px;
-  }
+  } */
   .navigation-item:first-child {
     padding-left: 0;
   }

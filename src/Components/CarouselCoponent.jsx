@@ -10,6 +10,7 @@ export default class CarouselCoponent extends Component {
             speed: 2000,
             fade: true,
             slidesToShow: 1,
+            arrows: false,
             slidesToScroll: 1,
             autoplay: true,
             cssEase: "linear",

@@ -23,7 +23,8 @@ Key: key of data on local storage
 Set State: set state of useState
 */
 export const initData = (key, setState) => {
-    setState(JSON.parse(localStorage.getItem(key)));
+    let data = JSON.parse(localStorage.getItem(key)) ? JSON.parse(localStorage.getItem(key)) : [];
+    setState(data);
 }
 
 export const UpdateLocalData = (key, data) => {

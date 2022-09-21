@@ -59,6 +59,7 @@ function InstantSearchComponent({ toggleSearch }) {
         dispatch(actionSearchPage(searchTerm));
         goToSearchPage(searchTerm);
         setOnSearch('');
+        toggleSearch();
     };
     return (
         <>
@@ -76,7 +77,7 @@ function InstantSearchComponent({ toggleSearch }) {
                         {renderResult()}
                     </div>
                     <div className="view-all-btn">
-                        <Link onClick={() => dispatch(actionSearchPage(resultData))} to={'/search'}>View all {totleProduct} products <i className="fa fa-arrow-right"></i></Link>
+                        <a onClick={(e) => { submitSearch(e, searchKey)}}>View all {totleProduct} products <i className="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
                 }

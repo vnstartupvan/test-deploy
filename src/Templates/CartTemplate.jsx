@@ -56,10 +56,10 @@ function CartTemplate() {
                     <div className="cart-list-items">
                         {renderCartItem()}
                     </div>
-                    <div className="totalPrice"><span>Total: ${totalPrice}</span></div>
+                    {cartList.length > 0 && <div className="totalPrice"><span>Total: ${totalPrice}</span></div>}
                 </div>
             </div>
-            
+
             <FooterComponent />
         </div>
     )

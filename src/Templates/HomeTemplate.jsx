@@ -10,11 +10,9 @@ function HomeTemplate() {
             <HeaderComponent />
             <CarouselCoponent />
             <div className="section-about-me">
-                <h3>Hi, Im Vance</h3>
-                <h3>I'm a Front-end developer!</h3>
                 <div className="about-me-content">
                     <p>This section below is the summary of this project</p>
-                    <h4>Technologies</h4>
+                    <h4>Technologies:</h4>
                     <p>Programming language: Javascript</p>
                     <p>Framework: React JS</p>
                     <p>State management: Redux</p>
