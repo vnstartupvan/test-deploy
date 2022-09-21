@@ -17,7 +17,7 @@ function ProductTemplate() {
             <HeaderComponent />
             <div className="breadcrumb">
                 <div className="page-width">
-                    <Link to={'/'}>Home</Link>
+                    <Link to={'/test-deploy'}>Home</Link>
                     <span className="arrow"> {'>'} </span>
                     <Link to={'/collection'}>Collection</Link>
                     <span className="arrow"> {'>'} </span>

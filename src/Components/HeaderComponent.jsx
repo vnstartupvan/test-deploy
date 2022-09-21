@@ -50,7 +50,7 @@ function HeaderComponent() {
             </div> */}
             <div className="header-middle text-center">
                 <nav className="navigation-list">
-                    <Link className='navigation-item' to="/">HOME</Link>
+                    <Link className='navigation-item' to="/test-deploy">HOME</Link>
                     <Link className='navigation-item' to="/collection">COLLECTION</Link>
                     <Link className='navigation-item' to="/cart">CART</Link>
                 </nav>

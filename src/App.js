@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<HomeTemplate />} />
+          <Route path='/test-deploy' element={<HomeTemplate />} />
           <Route path='/collection' element={<CollectionTemPlate />} />
           <Route path='/product' element={<ProductTemplate />} />
           <Route path='/search' element={<SearchTemplate />} />
