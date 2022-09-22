@@ -26,7 +26,7 @@ function HomeTemplate() {
                             <li><p className="em-text">Add to cart button</p> <p>Adding product to the cart on the collection page without being directed to the cart template</p></li>
                             <li><p className="em-text">Cart Drawer: </p> <p>Show the cart list on the collection template</p> </li>
                             <li><p className="em-text">Add/Remove</p> <p>product on the cart list</p> </li>
-                            <li><p className="em-text">Login/Logout</p> <p>Integrated with google account</p> </li>
+                            <li><p className="em-text">Login/Logout</p> <p>Integrated with google login</p> </li>
                         </ul>
                     </div>
 

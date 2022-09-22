@@ -56,7 +56,23 @@ function CartTemplate() {
                     <div className="cart-list-items">
                         {renderCartItem()}
                     </div>
-                    {cartList.length > 0 && <div className="totalPrice"><span>Total: ${totalPrice}</span></div>}
+
+                </div>
+            </div>
+            <div className="section-subtotal">
+                <div className="subtotal-wrapper">
+                    <div className="subtotal-left">
+                        <p>Add order note</p>
+                        <textarea></textarea>
+                    </div>
+                    <div className="subtotal-right">
+                        <div className="subtotal-info">
+                            {cartList.length > 0 && <div className="totalPrice"><span>Subtotal: ${totalPrice}</span></div>}
+                            <p>{`Shipping & taxes calculated at checkout`}</p>
+                            <p>Ecommerce Demo processes all orders in USD. While the content of your cart is currently displayed in USD, the checkout will use USD at the most current exchange rate.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
