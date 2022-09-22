@@ -729,11 +729,19 @@ export const filterReducer = createSlice({
                 case 'collection_type':
                     {
                         if (remove && isSearchPage) {
-                            state.searchPageData = current(state).oriSearchPageData;
+                            if (product_type_option.length > 0) {
+                                state.searchPageData = oriProductData.filter(product => product.product_type.includes(product_type_option[0]));
+                            } else {
+                                state.searchPageData = current(state).oriSearchPageData;
+                            }
                             state.selectedOption.collection_option = [];
                             return;
                         } else if (remove && !isSearchPage) {
-                            state.productList = oriProductData;
+                            if (product_type_option.length > 0) {
+                                state.productList = oriProductData.filter(product => product.product_type.includes(product_type_option[0]));
+                            } else {
+                                state.productList = oriProductData;
+                            }
                             state.selectedOption.collection_option = [];
                             return;
                         }
