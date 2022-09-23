@@ -13,7 +13,9 @@
   pointer-events: none;
   opacity: 0.4;
 }
-
+.hide {
+  display: none;
+}
 img {
   width: 100%;
 }
@@ -75,6 +77,13 @@ img {
   text-decoration: none !important;
 }
 
+.gg-btn-wrapper {
+  position: absolute;
+  top: 100%;
+  right: 5px;
+  margin-top: 5px;
+}
+
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -92,6 +101,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .header-right .instant-search,
@@ -1425,8 +1435,7 @@ img {
     position: relative;
   }
 
-  .gg-login-btn,
-  .logout-btn {
+  .gg-login-btn {
     z-index: 9;
     position: absolute;
     top: 100%;

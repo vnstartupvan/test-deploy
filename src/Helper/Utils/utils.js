@@ -30,3 +30,11 @@ export const initData = (key, setState) => {
 export const UpdateLocalData = (key, data) => {
     localStorage.setItem(key, JSON.stringify(data));
 }
+
+export const handleToggle = (state, setState) => {
+    if(state) {
+        setState(false);
+    }else {
+        setState(true);
+    }
+}

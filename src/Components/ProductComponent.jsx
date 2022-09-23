@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { handleAddToCart } from '../Helper/Features/AjaxCart/ajaxCart'
+import { handleAddToCart } from '../Helper/Features/AjaxCart/ajaxCart';
 import { actionQuickview, actionViewProductPage } from '../Redux/filterReducer';
 import { AllContext } from '../Templates/CollectionTemplate';
 

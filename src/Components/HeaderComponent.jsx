@@ -6,7 +6,8 @@ import { AllContext } from '../Templates/CollectionTemplate';
 import InstantSearchComponent from './InstantSearchComponent';
 import { actionCartList } from '../Redux/filterReducer';
 import LoginComponent from './LoginComponent';
-import { handleLogin, handleLogout } from '../Redux/shopReducer';
+import { handleToggle } from '../Helper/Utils/utils';
+import {  handleLogout } from '../Redux/shopReducer';
 
 function HeaderComponent() {
     const dispatch = useDispatch();
@@ -14,6 +15,7 @@ function HeaderComponent() {
     const context = useContext(AllContext);
     const [toggleSearch, setToggleSearch] = useState('');
     let cartQty = useSelector((state) => state.filter.cartList.length);
+    const [toggleLogin, setToggleLogin] = useState(false);
 
     useEffect(() => {
         let initCartList = JSON.parse(localStorage.getItem('cartList'));
@@ -45,11 +47,16 @@ function HeaderComponent() {
                 </div>
                 <div className="login-logout">
                     {!user ?
-                        <i className="fa fa-user"></i>
+                        <i onClick={() => { handleToggle(toggleLogin, setToggleLogin) }} className="fa fa-user"></i>
                         :
-                        <div onClick={() => { actionLogout() }} className='user-avatar'><img src={user.picture} alt="" /></div>
+                        <div onClick={() => { handleToggle(toggleLogin, setToggleLogin) }} className='user-avatar'><img src={user.picture} alt="" /></div>
                     }
-                    {!user && <LoginComponent />}
+                    {toggleLogin && !user && <LoginComponent />}
+                    {toggleLogin && user && <div className="gg-btn-wrapper">
+                        <div onClick={() => { actionLogout() }} className="logout-btn">
+                            <span>Logout</span>
+                        </div>
+                    </div>}
                 </div>
                 {window.location.href.includes('collection') ?
                     <div onClick={window.location.href.includes('collection') ? actionToggleCart : ''} className="cart-icon">
