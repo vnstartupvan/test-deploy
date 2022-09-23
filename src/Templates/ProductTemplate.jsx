@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import FooterComponent from '../Components/FooterComponent';
 import HeaderComponent from '../Components/HeaderComponent';
 import { Link } from "react-router-dom";
@@ -9,6 +9,7 @@ import {handleAddToCart} from '../Helper/Features/AjaxCart/ajaxCart'
 function ProductTemplate() {
     const { search } = useLocation();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const initData = useSelector((state) => state.filter.originalProductList);
     // const productData = data;
     const data = initData.find(item => item.id == search.replace('?', ''))
@@ -52,7 +53,7 @@ function ProductTemplate() {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ullam, id maxime eaque explicabo earum quae. Molestias tempora accusamus doloribus illo facilis cupiditate doloremque ipsam quae commodi nesciunt voluptatum laboriosam excepturi saepe labore consectetur, ad ea eius similique quos. Eligendi magnam nisi perferendis harum soluta quibusdam explicabo nobis alias accusamus?</p>
                         </div>
                         <div className="main-product-actions">
-                            <button className="main-quickview-btn">Buy it now</button>
+                            <button onClick={()=> {navigate({pathname:'/cart'})}} className="main-quickview-btn">Buy it now</button>
                             <button onClick={()=> handleAddToCart(data, '' ,dispatch)} className="main-add-to-cart-btn">Add To Cart</button>
                         </div>
                     </div>
